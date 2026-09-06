@@ -17,19 +17,19 @@ public class App {
         suaConta.endereco = "Rua do Consumidor 111";
         suaConta.saldo = 55.63;       
         
-        out.print(minhaConta.nome);
-        out.print("(");
-        out.print(minhaConta.endereco);
-        out.print(") tem $");
-        out.print(minhaConta.saldo);
-        out.println();
+        minhaConta.display();
 
-        out.print(suaConta.nome);
-        out.print("(");
-        out.print(suaConta.endereco);
-        out.print(") tem $");
-        out.print(suaConta.saldo);
-        out.println();
+        out.print(" mais $");
+        out.print(minhaConta.getJuros(5.00));
+        out.println(" juros");
+
+        suaConta.display();
+
+        double suaTaxaJuros = 7.00;
+        out.print(" mais $");
+        double seuValorJuros = suaConta.getJuros(suaTaxaJuros);
+        out.print(seuValorJuros);
+        out.println(" juros");
 
 
     }
